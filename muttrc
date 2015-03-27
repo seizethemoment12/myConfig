@@ -1,0 +1,17 @@
+set sendmail="/usr/bin/msmtp"
+
+set mbox_type = Maildir
+set folder = ~/.mail/
+set spoolfile = +private/INBOX
+mailboxes = +private/INBOX +private/flagged +private/drafts +private/sent +private/trash \
+    +private/spam +private/archive /var/log/mail/brandon
+
+macro index E "<change-folder>+private/archive<enter><limit>~B " "search everything"
+macro index,pager A "<save-message>+private/archive<enter>" "move message to the archive"
+macro index D "<save-message>+private/trash<enter>" "move message to the trash"
+macro index S "<save-message>+private/spam<enter>" "mark message as spam"
+
+
+set sort = reverse-date-received
+
+set editor="vim -c 'set spell spellland=en'"
