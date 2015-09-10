@@ -1,3 +1,13 @@
+" Vim Plugin List
+" - Nerd Tree
+
+"   Nerd Tree Settings
+"   autocmd vimenter *NERDTree
+"
+
+"  ctrlp.vim Settings
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 "show line numbers
 set number
 
